@@ -1,16 +1,20 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import { Login } from "./components/auth/Login";
 import { Listings } from "./components/listings/Listings";
+import { SavedListings } from "./components/listings/SavedListings";
+import { MessageList } from "./components/messages/MessageList";
 
 export const ApplicationViews = () => {
     return (
         <>
-        <Route path="/login">
-            <Login />
-        </Route>
-        <Route path="/">
+        <Route exact path="/">
             <Listings />
+        </Route>
+        <Route path="/messages">
+            <MessageList />
+        </Route>
+        <Route path="/savedListings">
+            <SavedListings />
         </Route>
         </>
     )
