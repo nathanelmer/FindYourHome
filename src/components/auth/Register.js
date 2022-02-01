@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { fetchIt } from "../../apiManager/Fetch";
 
 export const Register = () => {
 const [newUser, setUser] = useState({})
@@ -11,8 +12,8 @@ const updateCustomer = (e) => {
 }
 
 const createUser = () => {
-    window.alert("Account has been created, please log in")
-    localStorage.setItem("user", newUser.id)
+    fetchIt("http://localhost:8088/users", "POST", JSON.stringify(newUser))
+    
 }
    
    
