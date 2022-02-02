@@ -34,6 +34,7 @@ export const Listings = () => {
                                 copy.note = "You have no notes for this listing!"
                                 setSavedListing(copy)
                                 sendSavedListing(copy)
+                                window.alert("This listing has been saved!")
                             }}>Save</button>
                         </div>})
             }

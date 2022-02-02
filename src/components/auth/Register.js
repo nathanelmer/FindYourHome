@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { fetchIt } from "../../apiManager/Fetch";
 
 export const Register = () => {
-const [newUser, setUser] = useState({})
+const [newUser, setUser] = useState({ realtor: false})
 
 
 const updateCustomer = (e) => {
@@ -10,6 +10,7 @@ const updateCustomer = (e) => {
     copy[e.target.id] = e.target.value
     setUser(copy)
 }
+
 
 const createUser = () => {
     fetchIt("http://localhost:8088/users", "POST", JSON.stringify(newUser))
@@ -22,20 +23,14 @@ const createUser = () => {
         <main>
             <form onSubmit={createUser}>
                 <h1>Find Your Home</h1>
-                <h3>Please fill in all of the fields</h3>
+                <h3>Please fill out all of the fields</h3>
                     <fieldset>
                         <label htmlFor="inputEmail">Email address</label>
                         <input type="email"
                         id="email"
                         onChange={updateCustomer}
                         className="loginForm"
-                        placeholder="Email address"
-                        required autoFocus/>
-                        
-                        <label htmlFor="inputEmail">Re-enter email address</label>
-                        <input type="email"
-                        className="loginForm"
-                        placeholder="Email address"
+                        placeholder="Email address..."
                         required autoFocus/>
                         
                         <label htmlFor="inputName">First and last name</label>
@@ -43,7 +38,7 @@ const createUser = () => {
                         id="name"
                         onChange={updateCustomer}
                         className="loginForm"
-                        placeholder="Email address"
+                        placeholder="First and last name..."
                         required autoFocus/>
 
                         <label htmlFor="inputNumber">Phone number</label>
@@ -51,7 +46,7 @@ const createUser = () => {
                         id="phoneNumber"
                         onChange={updateCustomer}
                         className="loginForm"
-                        placeholder="Email address"
+                        placeholder="Phone number..."
                         required autoFocus/>
                     </fieldset>
                     <fieldset>
