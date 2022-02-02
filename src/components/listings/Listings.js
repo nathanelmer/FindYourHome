@@ -31,7 +31,7 @@ export const Listings = () => {
                                 const copy = {...savedListing}
                                 copy.userId = parseInt(currentUser)
                                 copy.listingId = list.id
-                                copy.note = "You have no notes for this listing!"
+                                copy.note = ""
                                 setSavedListing(copy)
                                 sendSavedListing(copy)
                                 window.alert("This listing has been saved!")

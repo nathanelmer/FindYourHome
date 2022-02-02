@@ -43,7 +43,24 @@ export default ( {listing, setState} ) => {
               {listing.listing.bedrooms} bedroom(s)/ {listing.listing.bathrooms}
               bathroom(s)
             </p>
-            <p>{listing.note}</p>
+            <div>
+              {listing.note === "" ?
+              "" :
+              <div>{listing.note}
+                <button onClick={(e) => {
+                 e.preventDefault();
+                 const copy = { ...newList };
+                 copy.userId = parseInt(currentUser);
+                 copy.listingId = listing.listingId;
+                 copy.note = note;
+                 setList(copy);
+                 addNote(copy, listing.id);
+                 setNote("");
+              }}>Delete</button>
+              </div>
+            } 
+              
+              </div>
             <label htmlFor="note">Notes:</label>
             <input
               type="text"
