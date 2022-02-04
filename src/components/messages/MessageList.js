@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchIt } from "../../apiManager/Fetch";
-import "../listings/Listing.css"
+import "./Message.css"
 
 export const MessageList = () => {
     const [messages, setMessages] = useState([])
@@ -15,10 +15,13 @@ export const MessageList = () => {
         const userMessages = messages.filter((msg) => msg.recipientId === parseInt(currentUser))
         if (userMessages.length > 0){
         return userMessages.map(msgs => {
-            return <div key={`listing--${msgs.id}`} className="card">
-                            <p>From {msgs.user.name}</p>
-                            <p>{msgs.content}</p>
-                        </div>
+            return <div key={`listing--${msgs.id}`} className="message">
+                          <div>
+                            <p className="msgAuthor">From {msgs.user.name},</p>
+                            <p className="msgContent">{msgs.content}</p>
+                          </div>
+                          <button className="replyBtn">Reply</button>
+                    </div>
          }
        )
       } else { return <p>You have no messages yet!</p>}
@@ -26,7 +29,7 @@ export const MessageList = () => {
 
     return (
         <>
-        <h1>Messages</h1>
+        <h2>Messages</h2>
         <section>
             {matchedMessages()}
         </section>

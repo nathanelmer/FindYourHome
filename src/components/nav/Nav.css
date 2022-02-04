@@ -1,0 +1,28 @@
+.navbar {
+    height: 6em;
+    background-color: rgb(212, 221, 221);
+}
+
+.logo {
+    margin-top: 2px;
+    margin-left: 10px;
+    float: left;
+    height: 90px;
+    width: 105px;
+    
+}
+
+.navItem {
+    float: right;
+    margin-top: 9px;
+    margin-left: 2em;
+    margin-right: 3px;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
+
+

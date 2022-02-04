@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Nav.css"
 
 export const NavBar = () => {
 
@@ -7,19 +8,19 @@ export const NavBar = () => {
         localStorage.removeItem("user")
     }
     return (
-        <ul>
-            <li>
-                <Link to="/">Logo</Link>
-            </li>
-            <li>
-                <Link to="/savedListings">My Listings</Link>
-            </li>
-            <li>
-                <Link to="/messages">Messages</Link>
-            </li>
-            <li>
-                <Link to="/login" onClick={logoutUser}>Logout</Link>
-            </li> 
-        </ul>
+        <section className="navbar">
+            <div>
+                <Link to="/"><img className="logo" src="../../images/home.png"/></Link>
+            </div>
+            <div className="navItem">
+                <Link to="/login" onClick={logoutUser}><img className="navItem" src="../images/logout.png"/></Link>
+            </div> 
+            <div className="navItem">
+                <Link to="/savedListings"><img className="navItem" src="../images/cart.png"/></Link>
+            </div>
+            <div className="navItem">
+                <Link to="/messages"><img className="navItem" src="../images/mail.png"/></Link>
+            </div>
+        </section>
     )
 }
