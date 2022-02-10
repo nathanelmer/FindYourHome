@@ -32,7 +32,7 @@ export const SendMessage = () => {
 
         fetchIt("http://localhost:8088/messages", "POST", JSON.stringify(newMessage))
         .then(() => {
-            history.push("messages")
+           window.alert("Message has been sent!")
         })
     }
 

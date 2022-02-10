@@ -19,6 +19,14 @@ export const Listings = ({ currentUser }) => {
     fetchIt("http://localhost:8088/savedListings", "POST", JSON.stringify(listing))
   }
 
+  const removeListing = (id) => {
+    fetch(`http://localhost:8088/listings/${id}`, { method: "DELETE" })
+      .then(() =>
+        fetchIt("http://localhost:8088/listings")
+      )
+      .then((data) => setListings(data));
+  };
+
     return <>
         <section className="page">
         <div className="listHeader">
@@ -48,10 +56,11 @@ export const Listings = ({ currentUser }) => {
                                     setSavedListing(copy)
                                     sendSavedListing(copy)
                                     window.alert("This listing has been saved!")
-                                    history.push("/savedListings")
                                     }}>Save</button>
                                 :
-                                ""
+                                <button className="saveBtn"
+                                onClick={() => removeListing(list.id)}
+                                >Delete</button>
                                 }
                             
                         </div>})
