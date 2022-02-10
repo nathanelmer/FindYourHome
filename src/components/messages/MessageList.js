@@ -25,7 +25,7 @@ export const MessageList = () => {
                     </div>
          }
        )
-      } else { return <p>You have no messages yet!</p>}
+      } else { return <h2>You have no messages yet!</h2>}
     }
 
     return (
