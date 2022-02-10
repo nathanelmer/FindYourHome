@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { fetchIt } from "../../apiManager/Fetch";
+import "./Login.css"
 
 export const Register = () => {
 const [newUser, setUser] = useState({ realtor: false})
@@ -19,35 +20,40 @@ const createUser = () => {
    
    
    return (<>
-    <h1>Register</h1>
-        <main>
-            <form onSubmit={createUser}>
-                <h1>Find Your Home</h1>
-                <h3>Please fill out all of the fields</h3>
+        <main className="card">
+            <form onSubmit={createUser} className="registerCard">
+                <header>
+                    <h1>Register for a new account</h1>
+                    <h3>Please fill out all of the fields</h3>
+                </header>
                     <fieldset>
-                        <label htmlFor="inputEmail">Email address</label>
-                        <input type="email"
-                        id="email"
-                        onChange={updateCustomer}
-                        className="loginForm"
-                        placeholder="Email address..."
-                        required autoFocus/>
-                        
-                        <label htmlFor="inputName">First and last name</label>
-                        <input type="text"
-                        id="name"
-                        onChange={updateCustomer}
-                        className="loginForm"
-                        placeholder="First and last name..."
-                        required autoFocus/>
-
-                        <label htmlFor="inputNumber">Phone number</label>
-                        <input type="text"
-                        id="phoneNumber"
-                        onChange={updateCustomer}
-                        className="loginForm"
-                        placeholder="Phone number..."
-                        required autoFocus/>
+                        <div className="input">
+                            <label htmlFor="inputEmail">Email address</label>
+                            <input type="email"
+                            id="email"
+                            onChange={updateCustomer}
+                            className="loginForm"
+                            placeholder="Email address..."
+                            required autoFocus/>
+                        </div>
+                        <div className="input">
+                            <label htmlFor="inputName">First and last name</label>
+                            <input type="text"
+                            id="name"
+                            onChange={updateCustomer}
+                            className="loginForm"
+                            placeholder="First and last name..."
+                            required autoFocus/>
+                        </div>
+                        <div className="input">
+                            <label htmlFor="inputNumber">Phone number</label>
+                            <input type="text"
+                            id="phoneNumber"
+                            onChange={updateCustomer}
+                            className="loginForm"
+                            placeholder="Phone number..."
+                            required autoFocus/>
+                        </div>
                     </fieldset>
                     <fieldset>
                         <button type="submit">Create Account</button>

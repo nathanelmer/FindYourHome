@@ -6,7 +6,9 @@ import { Register } from "./components/auth/Register";
 import { NavBar } from "./components/nav/NavBar";
 
 
-export const FindYourHome = () => ( 
+export const FindYourHome = () => {
+    
+    return (
     <>
         <Route
             render={() => {
@@ -31,3 +33,4 @@ export const FindYourHome = () => (
         </Route>
      </>
 )
+}

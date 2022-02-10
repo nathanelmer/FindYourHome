@@ -1,6 +1,6 @@
 .navbar {
     height: 6em;
-    background-color: rgb(212, 221, 221);
+    background-color:rgb(178, 204, 204);
 }
 
 .logo {
@@ -14,6 +14,7 @@
 
 .navItem {
     float: right;
+    border-radius: 4px;
     margin-top: 9px;
     margin-left: 2em;
     margin-right: 3px;

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { fetchIt } from "../../apiManager/Fetch";
 import "./Message.css"
 
@@ -20,7 +21,7 @@ export const MessageList = () => {
                             <p className="msgAuthor">From {msgs.user.name},</p>
                             <p className="msgContent">{msgs.content}</p>
                           </div>
-                          <button className="replyBtn">Reply</button>
+                          <button className="replyBtn"><Link to="/sendMessage">Reply</Link></button>
                     </div>
          }
        )
