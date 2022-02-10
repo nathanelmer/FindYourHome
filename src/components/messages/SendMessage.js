@@ -65,7 +65,7 @@ export const SendMessage = () => {
                         onChange={(e) => setMessage(e.target.value)}
                         />
                     </fieldset>
-                    <div className="idk">
+                    <div className="btnContainer">
                         <button type="submit" className="loginBtn">Send</button>
                     </div>
             </form>

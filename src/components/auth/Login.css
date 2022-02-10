@@ -43,7 +43,7 @@ html {
     margin-bottom: 5px;
 }
 
-.idk {
+.btnContainer {
     display: flex;
     flex-direction: column;
     align-items: center;

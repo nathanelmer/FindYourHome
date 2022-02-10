@@ -40,7 +40,7 @@ export const Login = () => {
                         placeholder="Email address"
                         required autoFocus/>
                     </fieldset>
-                    <div className="idk">
+                    <div className="btnContainer">
                         <button type="submit" className="loginBtn" >Sign in</button>
                         <button className="loginBtn"><Link to="/register">Register</Link></button>
                     </div>

@@ -24,7 +24,7 @@ export const Listings = ({ currentUser }) => {
         <div className="listHeader">
         <h2>Available Homes</h2>
         {currentUser?.realtor === true ?
-            <Link><img className="addImg" src="../images/add.png"/></Link>
+            <Link to="/addListing"><img className="addImg" src="../images/add.png"/></Link>
         :
         ""
         }

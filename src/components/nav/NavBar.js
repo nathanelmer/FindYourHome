@@ -36,6 +36,9 @@ export const NavBar = () => {
             <div className="navItem">
                 <Link to="/messages"><img className="navItem" src="../images/mail.png"/></Link>
             </div>
+            <div className="navItem">
+                <Link to="/sendMessage"><img className="navItem" src="../images/sendMail.png"/></Link>
+            </div>
         </section>
     )
 

@@ -6,6 +6,7 @@ import SavedListings from "./components/listings/SavedListings";
 import { MessageList } from "./components/messages/MessageList";
 import { Leads } from "./components/leads/Leads"
 import { SendMessage } from "./components/messages/SendMessage";
+import { AddListing } from "./components/listings/AddListing";
 
 export const ApplicationViews = () => {
     const [currentUser, setUser] = useState({})
@@ -36,6 +37,9 @@ export const ApplicationViews = () => {
         </Route>
         <Route path="/savedListings">
             <SavedListings />
+        </Route>
+        <Route path="/addListing">
+            <AddListing />
         </Route>
         <Route path="/sendMessage">
             <SendMessage />
