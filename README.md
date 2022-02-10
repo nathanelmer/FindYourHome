@@ -35,11 +35,11 @@ And the user can click on the homepage icon to return to the listing homepage.
 
 ## The Realtor is presented with the same login screen 
 
-However whenever they login, their homepage consists of all current users on their app presented as "leads"
+However whenever they login, their homepage consists of all current users of their app presented as "leads"
 
 <img width="1792" alt="Screen Shot 2022-02-10 at 3 09 09 PM" src="https://user-images.githubusercontent.com/40260397/153496731-918ede73-f7f7-43a3-9ca3-09120e4555be.png">
 
-# The Realtor is given the same nav bar but instead of saved listings, they have a link to all listings with a delete listing button and an add new listing button
+## The Realtor is given the same nav bar but instead of saved listings, they have a link to all listings with a delete listing button and an add new listing button
 
 <img width="1792" alt="Screen Shot 2022-02-10 at 3 10 38 PM" src="https://user-images.githubusercontent.com/40260397/153496927-524b00ed-a587-4951-8d01-c596a7597d6e.png">
 
@@ -47,4 +47,5 @@ When the Realtor clicks the plus button to add a listing they are presented with
 
 <img width="1792" alt="Screen Shot 2022-02-10 at 3 12 40 PM" src="https://user-images.githubusercontent.com/40260397/153497228-5417858b-0fd4-45b6-8c4c-bcd243dfc0d1.png">
 
+When the Realtor adds the listing it brings them back to the listing page so they can see that the new listing has been added
 
