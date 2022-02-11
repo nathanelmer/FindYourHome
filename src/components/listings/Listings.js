@@ -45,7 +45,7 @@ export const Listings = ({ currentUser }) => {
                                         <div className="info">
                                             <p>$ {list.price.toLocaleString()}</p>
                                             <p>{list.address}</p>
-                                            <p>{list.bedrooms} bedroom(s)/ {list.bathrooms} bathroom(s)</p>
+                                            <p>{list.bedrooms > 1 ? `${list.bedrooms} bedrooms` : `${list.bedrooms} bedroom`} / {list.bathrooms > 1 || list.bathrooms === 0 ? `${list.bathrooms} bathrooms` : `${list.bathrooms} bathroom`}</p>
                                 </div>
                                 {!currentUser?.realtor ?
                                     <button className="saveBtn" onClick={() => {
