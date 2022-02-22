@@ -1,0 +1,29 @@
+.navbar {
+    height: 6em;
+    background-color:rgb(178, 204, 204);
+}
+
+.logo {
+    margin-top: 2px;
+    margin-left: 10px;
+    float: left;
+    height: 90px;
+    width: 105px;
+    
+}
+
+.navItem {
+    float: right;
+    border-radius: 4px;
+    margin-top: 9px;
+    margin-left: 2em;
+    margin-right: 3px;
+    height: 50px;
+    width: 50px;
+}
+
+
+
+
+
+

@@ -1,41 +1,68 @@
 import React, { useEffect, useState } from "react";
+import { Link, useHistory } from "react-router-dom";
 import { fetchIt } from "../../apiManager/Fetch";
 import "../listings/Listing.css"
 
-export const Listings = () => {
+export const Listings = ({ currentUser }) => {
     const [listings, setListings] = useState([])
     const [savedListing, setSavedListing] = useState({})
-    const currentUser = localStorage.getItem("user")
+    const currentUserId = localStorage.getItem("user")
+    const history = useHistory()
 
     useEffect(() => {
         fetchIt("http://localhost:8088/listings")
             .then(listingData => setListings(listingData))
     },[])
 
+
   const sendSavedListing = (listing) => {
     fetchIt("http://localhost:8088/savedListings", "POST", JSON.stringify(listing))
   }
 
+  const removeListing = (id) => {
+    fetch(`http://localhost:8088/listings/${id}`, { method: "DELETE" })
+      .then(() =>
+        fetchIt("http://localhost:8088/listings")
+      )
+      .then((data) => setListings(data));
+  };
+
     return <>
-        <h2>Listings</h2>
-        <section className="card">
+        <section className="page">
+        <div className="listHeader">
+        <h2>Available Homes</h2>
+        {currentUser?.realtor === true ?
+            <Link to="/addListing"><img className="addImg" src="../images/add.png"/></Link>
+        :
+        ""
+        }
+        </div>
             {
                 listings.map(
                     (list) => {
-                        return <div key={`listing--${list.id}`} className="card">
-                            <p>{list.imageURL}</p>
-                            <p>$ {list.price.toLocaleString()}</p>
-                            <p>{list.address}</p>
-                            <p>{list.bedrooms} bedroom(s)/ {list.bathrooms} bathroom(s)</p>
-                            <button onClick={() => {
-                                const copy = {...savedListing}
-                                copy.userId = parseInt(currentUser)
-                                copy.listingId = list.id
-                                copy.note = ""
-                                setSavedListing(copy)
-                                sendSavedListing(copy)
-                                window.alert("This listing has been saved!")
-                            }}>Save</button>
+                        return <div key={`listing--${list.id}`} className="listing">
+                                    <img className="listingImg" src={list.imageURL}/>
+                                        <div className="info">
+                                            <p>$ {list.price.toLocaleString()}</p>
+                                            <p>{list.address}</p>
+                                            <p>{list.bedrooms > 1 ? `${list.bedrooms} bedrooms` : `${list.bedrooms} bedroom`} / {list.bathrooms > 1 || list.bathrooms === 0 ? `${list.bathrooms} bathrooms` : `${list.bathrooms} bathroom`}</p>
+                                </div>
+                                {!currentUser?.realtor ?
+                                    <button className="saveBtn" onClick={() => {
+                                    const copy = {...savedListing}
+                                    copy.userId = parseInt(currentUserId)
+                                    copy.listingId = list.id
+                                    copy.note = ""
+                                    setSavedListing(copy)
+                                    sendSavedListing(copy)
+                                    window.alert("This listing has been saved!")
+                                    }}>Save</button>
+                                :
+                                <button className="saveBtn"
+                                onClick={() => removeListing(list.id)}
+                                >Delete</button>
+                                }
+                            
                         </div>})
             }
         </section>

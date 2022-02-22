@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
+import "./Login.css"
 
 export const Login = () => {
     const [email, setEmail] = useState("")
@@ -25,25 +26,25 @@ export const Login = () => {
     }
 
     return (
-        <main>
-            <form onSubmit={handleLogin}>
-                <h1>Find Your Home</h1>
-                <h3>Please sign in</h3>
+        <main className="card">
+            <form onSubmit={handleLogin} className="loginCard">
+                    <header className="loginHeader">
+                        <h1>Find Your Home</h1>
+                        <h3>Please sign in</h3>
+                    </header>
                     <fieldset>
-                        <label htmlFor="inputEmail">Email address</label>
+                        <label htmlFor="inputEmail">Email address:</label>
                         <input type="email"
                         onChange={event => setEmail(event.target.value)}
                         className="loginForm"
                         placeholder="Email address"
                         required autoFocus/>
                     </fieldset>
-                    <fieldset>
-                        <button type="submit">Sign in</button>
-                    </fieldset>
+                    <div className="btnContainer">
+                        <button type="submit" className="loginBtn" >Sign in</button>
+                        <button className="loginBtn"><Link to="/register">Register</Link></button>
+                    </div>
             </form>
-            <div>
-                <button><Link to="/register">Register</Link></button>
-            </div>
          </main>   
     )
 }

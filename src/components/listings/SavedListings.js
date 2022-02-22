@@ -18,7 +18,7 @@ export default () => {
 
     return (
         <>
-        <h1>Saved Listings</h1>
+        <h2>Saved Listings</h2>
             <section>
                 {
                     matchedListings().length > 0

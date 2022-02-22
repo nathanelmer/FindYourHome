@@ -2,69 +2,57 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Find Your Home
 
-In the project directory, you can run:
+## This application was designed for a realtor and also home buyers. The purpose of my app was to create a dynamic application that buyers can look for new homes and save homes they like to their profile. It is also a way to focus leads in one group and have free access to them as a realtor.
 
-### `npm start`
+## To test yourself install node.js
+### run npm install for dependencies
+### clone my findYourHomeAPI
+### run json server on port 8088
+### npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+With Find Your Home, buyers will first see a Login page and can create a new account.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![Screen Shot 2022-02-10 at 2 40 31 PM (2)](https://user-images.githubusercontent.com/40260397/153494548-17f595d6-3b70-464d-b5c4-ea9dd7910f58.png)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Once they have logged in, the user is presented with a navigation bar and a list of all current listings with the option to save a specific listing
 
-### `npm run build`
+<img width="1792" alt="Screen Shot 2022-02-10 at 2 54 46 PM" src="https://user-images.githubusercontent.com/40260397/153495153-179c21b9-6c9c-4ba2-97a9-9a2b6dfad40c.png">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## The nav bar has the options to send a message, view messages sent to you, look at your saved listings, and logout.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Here is what the user sees when they want to send a message
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 03 23 PM" src="https://user-images.githubusercontent.com/40260397/153496024-a1d0b692-7b9d-4f3b-aa72-d4ed59019dd1.png">
 
-### `npm run eject`
+Here is what the user sees when they want to view their inbox
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 04 30 PM" src="https://user-images.githubusercontent.com/40260397/153496160-a0505fc7-3094-4525-b5d9-11654bdfd67b.png">
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+And here is what the user sees when they click on Jesus aka their saved listings
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 05 38 PM" src="https://user-images.githubusercontent.com/40260397/153496331-a5de42b4-1b04-43f8-8b67-0de15fba591d.png">
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+And the user can click on the homepage icon to return to the listing homepage.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Realtor/Admin side of application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## The Realtor is presented with the same login screen 
 
-### Code Splitting
+However whenever they login, their homepage consists of all current users of their app presented as "leads"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 09 09 PM" src="https://user-images.githubusercontent.com/40260397/153496731-918ede73-f7f7-43a3-9ca3-09120e4555be.png">
 
-### Analyzing the Bundle Size
+## The Realtor is given the same nav bar but instead of saved listings, they have a link to all listings with a delete listing button and an add new listing button
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 10 38 PM" src="https://user-images.githubusercontent.com/40260397/153496927-524b00ed-a587-4951-8d01-c596a7597d6e.png">
 
-### Making a Progressive Web App
+When the Realtor clicks the plus button to add a listing they are presented with a form to fill out the pertinent information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<img width="1792" alt="Screen Shot 2022-02-10 at 3 12 40 PM" src="https://user-images.githubusercontent.com/40260397/153497228-5417858b-0fd4-45b6-8c4c-bcd243dfc0d1.png">
 
-### Advanced Configuration
+When the Realtor adds the listing it brings them back to the listing page so they can see that the new listing has been added
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
