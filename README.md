@@ -4,13 +4,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Find Your Home
 
-## This application was designed for a realtor and also home buyers. The purpose of my app was to create a dynamic application that buyers can look for new homes and save homes they like to their profile. It is also a way to focus leads in one group and have free access to them as a realtor.
+ This application was designed for a realtor and also home buyers. The purpose of my app was to create a dynamic application that buyers can look for new homes and save homes they like to their profile. It is also a way to focus leads in one group and have free access to them as a realtor.
 
-## To test yourself install node.js
-### run npm install for dependencies
-### clone my findYourHomeAPI
-### run json server on port 8088
-### npm start
+ To test yourself install node.js
+ run npm install for dependencies
+ clone my findYourHomeAPI
+ run json server on port 8088
+ npm start
 
 With Find Your Home, buyers will first see a Login page and can create a new account.
 
